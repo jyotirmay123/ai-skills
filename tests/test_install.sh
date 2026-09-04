@@ -27,26 +27,35 @@ run_install() {
 codex_home="$test_root/codex"
 mkdir -p "$codex_home"
 run_install "$codex_home" --codex
-assert_file "$codex_home/.agents/skills/trip/SKILL.md"
-assert_missing "$codex_home/.claude/skills/trip"
+for skill_name in trip stay holiday; do
+  assert_file "$codex_home/.agents/skills/$skill_name/SKILL.md"
+  assert_missing "$codex_home/.claude/skills/$skill_name"
+done
 
 claude_home="$test_root/claude"
 mkdir -p "$claude_home"
 run_install "$claude_home" --claude
-assert_file "$claude_home/.claude/skills/trip/SKILL.md"
-assert_missing "$claude_home/.agents/skills/trip"
+for skill_name in trip stay holiday; do
+  assert_file "$claude_home/.claude/skills/$skill_name/SKILL.md"
+  assert_missing "$claude_home/.agents/skills/$skill_name"
+done
 
 all_home="$test_root/all"
 mkdir -p "$all_home"
 run_install "$all_home"
-assert_file "$all_home/.agents/skills/trip/SKILL.md"
-assert_file "$all_home/.claude/skills/trip/SKILL.md"
+for skill_name in trip stay holiday; do
+  assert_file "$all_home/.agents/skills/$skill_name/SKILL.md"
+  assert_file "$all_home/.claude/skills/$skill_name/SKILL.md"
+done
 
 printf 'old installation\n' > "$all_home/.agents/skills/trip/marker.txt"
+printf 'old installation\n' > "$all_home/.agents/skills/stay/marker.txt"
 run_install "$all_home" --codex
-backup_marker=$(find "$all_home/.agents/skills" -path '*/trip.backup-*/marker.txt' -type f | head -n 1)
-[ -n "$backup_marker" ] || fail 'existing installation was not backed up'
-assert_file "$all_home/.agents/skills/trip/SKILL.md"
+for skill_name in trip stay; do
+  backup_marker=$(find "$all_home/.agents/skills" -path "*/$skill_name.backup-*/marker.txt" -type f | head -n 1)
+  [ -n "$backup_marker" ] || fail "existing $skill_name installation was not backed up"
+  assert_file "$all_home/.agents/skills/$skill_name/SKILL.md"
+done
 
 if run_install "$test_root/invalid" --unknown >"$test_root/invalid.out" 2>&1; then
   fail 'unknown option unexpectedly succeeded'
