@@ -1,4 +1,4 @@
-# My AI Skills
+# AI Skills
 
 Reusable Agent Skills for Codex and Claude Code. Each skill follows the open Agent Skills folder format: a `SKILL.md` entrypoint plus optional references and scripts.
 
@@ -13,8 +13,8 @@ Reusable Agent Skills for Codex and Claude Code. Each skill follows the open Age
 Requires Git and a POSIX shell (macOS, Linux, or WSL).
 
 ```bash
-git clone https://github.com/jyotirmay123/my-ai-skills.git
-cd my-ai-skills
+git clone https://github.com/jyotirmay123/ai-skills.git
+cd ai-skills
 sh install.sh --all
 ```
 
