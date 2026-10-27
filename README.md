@@ -9,6 +9,7 @@ Reusable Agent Skills for Codex and Claude Code. Each skill follows the open Age
 | [`trip`](skills/trip/SKILL.md) | Research and compare bookable flights with price-first, total-time-aware ranking | `$trip` | `/trip` |
 | [`stay`](skills/stay/SKILL.md) | Compare exact accommodation using complete cost, local mobility, and usable-time impact | `$stay` | `/stay` |
 | [`holiday`](skills/holiday/SKILL.md) | Compose transport, stay, activities, food, and local travel into coherent holiday packages | `$holiday` | `/holiday` |
+| [`german-elster-tax-filing`](skills/german-elster-tax-filing/SKILL.md) | Prepare and review German personal/family tax returns with annual legal research, evidence, lawful optimization, and ELSTER guidance | `$german-elster-tax-filing` | `/german-elster-tax-filing` |
 
 ## Quick install
 
@@ -49,6 +50,8 @@ Copy-Item -Recurse -Force "./skills/stay" "$HOME/.agents/skills/stay"
 Copy-Item -Recurse -Force "./skills/stay" "$HOME/.claude/skills/stay"
 Copy-Item -Recurse -Force "./skills/holiday" "$HOME/.agents/skills/holiday"
 Copy-Item -Recurse -Force "./skills/holiday" "$HOME/.claude/skills/holiday"
+Copy-Item -Recurse -Force "./skills/german-elster-tax-filing" "$HOME/.agents/skills/german-elster-tax-filing"
+Copy-Item -Recurse -Force "./skills/german-elster-tax-filing" "$HOME/.claude/skills/german-elster-tax-filing"
 ```
 
 If a destination already exists, rename or remove it first so PowerShell does not nest the new folder inside the old one.
@@ -95,6 +98,31 @@ $holiday Plan a relaxing three-day Lapland holiday from Berlin for two. Compare 
 
 `holiday` uses `trip` for intercity transport and `stay` for accommodation and local mobility. It rejects incompatible combinations and reports whole-party, per-person, and per-usable-day cost alongside travel burden and booking risk.
 
+## Use German ELSTER Tax Filing
+
+```text
+$german-elster-tax-filing Prepare my 2025 German income-tax return. Ask for relevant documents, verify the year's rules, compare lawful household tax-saving options, and guide me through ELSTER.
+```
+
+```text
+$german-elster-tax-filing Review our family return with German and Indian rental income, co-owned property, renovation costs, RSUs and ETFs held at a foreign broker. Reconcile evidence, treaty treatment, depreciation, investment losses and ELSTER entries before proposing submission.
+```
+
+The skill screens each person's circumstances, asks focused follow-ups, and maintains a private evidence ledger, annual rule register, calculations, election comparisons, form map and filing/assessment status. References cover employment and family relief, multiple rentals and co-owner determinations, foreign income/residence, shares/ETFs/crypto, self-employment, pensions and unusual cases. Rules, thresholds, deadlines and form fields must be checked against official sources for each tax year. It supports multi-year carryforwards and assessment/objection review.
+
+Tax records belong outside this public repository. The skill seeks lawful savings; it cannot guarantee a refund, replace a licensed Steuerberater, or pre-solve every legal scenario. Material unresolved cases receive a targeted professional-review handoff while supported preparation continues. Transmission requires approval of the reviewed return and a confirmed receipt.
+
+No MCP or browser software is bundled or installed. The skill uses available browser tools or provides manual field instructions. Its [ELSTER operations reference](skills/german-elster-tax-filing/references/elster-operations.md) documents the reviewed community MCP's limited income-tax preparation and separate VAT submission capabilities, along with the official ERiC route. The community tools are optional and require capability and privacy checks before real use. [Official sources and prior art](skills/german-elster-tax-filing/references/sources.md) are included.
+
+For a single-skill Codex installation, copy only its directory:
+
+```bash
+mkdir -p "$HOME/.agents/skills"
+cp -R ./skills/german-elster-tax-filing "$HOME/.agents/skills/"
+```
+
+If that destination already exists, back it up first. Restart Codex if the new skill does not appear.
+
 ## Update
 
 ```bash
@@ -115,6 +143,8 @@ rm -r "$HOME/.agents/skills/stay"
 rm -r "$HOME/.claude/skills/stay"
 rm -r "$HOME/.agents/skills/holiday"
 rm -r "$HOME/.claude/skills/holiday"
+rm -r "$HOME/.agents/skills/german-elster-tax-filing"
+rm -r "$HOME/.claude/skills/german-elster-tax-filing"
 ```
 
 ## Validate changes
@@ -123,6 +153,8 @@ rm -r "$HOME/.claude/skills/holiday"
 sh tests/test_skill.sh
 sh tests/test_install.sh
 ```
+
+Installer checks compare complete skill directories, including nested references and metadata. The tax skill's [synthetic evaluation scenarios](skills/german-elster-tax-filing/tests/scenarios.md) exercise complex household intake, ETF timing, acquisition-related repairs, duplicate deductions, tool capability, deadlines and unusual foreign structures. These evaluate preparation behavior; they do not certify tax advice or test live ELSTER submission.
 
 ## License
 

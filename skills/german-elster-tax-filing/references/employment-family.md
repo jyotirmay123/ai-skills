@@ -1,0 +1,33 @@
+# Employment, family, and personal deductions
+
+## Employment and benefits
+
+Collect every Lohnsteuerbescheinigung, including corrected versions, foreign payroll, bonuses, severance/multi-year pay, employer pensions, employee equity, reimbursements and tax-free benefits. Reconcile gross pay, withholding, Soli/church tax, insurance contributions, and certificate lines; use imported eDaten once. Record benefits such as Elterngeld, unemployment, sickness, maternity and short-time-work payments and their periods; test progression and filing obligations rather than treating tax-free as irrelevant. Check extraordinary-income relief for the year, including whether relief remains an assessment issue despite changed payroll withholding.
+
+Build a workday calendar: first Tätigkeitsstätte, one-way distance, office days, remote days, holidays/sickness, external travel, public-transport cost, employer transport benefits, business trips, foreign work and relocation dates. Verify overlap exceptions rather than automatically claiming commute, home-office and meal costs on every day. For a separate office room establish exclusive/nearly exclusive professional use, whether it is the activity centre, costs and eligible period; compare only allowed alternatives.
+
+Review work equipment/software/phone/internet with invoice, acquisition/use dates, private-use allocation, employer reimbursement, depreciation and employee ownership. Ask professional fees/union, applications, training versus first education, travel/overnight/meals, occupational moves, legal costs and dual household. For dual household document main household, financial participation, work accommodation, distances/visits and actual costs. Apply the year's rules, caps and foreign-location limits. Employee RSU/option income and subsequent share sales require the investment and cross-border modules.
+
+Primary anchors: [§9 EStG](https://www.gesetze-im-internet.de/estg/__9.html), [§9a EStG](https://www.gesetze-im-internet.de/estg/__9a.html), [§32b EStG](https://www.gesetze-im-internet.de/estg/__32b.html), annual LStH and travel schedules in the source directory.
+
+## Household and assessment choices
+
+Determine eligibility for joint assessment using spouses'/registered partners' status and residence, periods of marriage and non-permanent separation, and §§1/1a/2(8)/26 EStG. Do not assume married automatically means eligible, especially with a nonresident spouse. Model total household tax under eligible alternatives; progression benefits, extraordinary burdens, foreign income and losses can change the winner. Preserve ownership and payment attribution; allocate only where the law permits. Record any required joint declarations/consents. Tax classes affect withholding and do not by themselves determine annual joint-assessment savings. [§26 EStG](https://www.gesetze-im-internet.de/estg/__26.html).
+
+For separation/divorce/remarriage/death check time-limited assessment options, child allocations, maintenance, extraordinary expenses and successor responsibilities. For unmarried couples assess each adult separately and determine each child's entitlements without moving income or costs between people for convenience.
+
+## One child record per child
+
+Collect birth date, tax ID when required, residence and custody by month/country, other parent, Kindergeld entitlement including comparable foreign benefits, school/apprenticeship/university periods, gaps, employment/hours and disabilities. Determine eligibility month by month and verify country reductions. Günstigerprüfung concerns child-benefit entitlement, not merely cash received; avoid counting both benefits and full allowances independently.
+
+Childcare: invoice/contract, child eligible age/disability and household membership, care provider, bank payment, payer, reimbursements and eligible service split. Exclude meals, lessons and leisure activities; determine caps/allocation for separate households. A verification example: official BMF annual tables distinguish 2024's two-thirds/€4,000 ceiling from 2025's 80%/€4,800. Always retrieve the selected year's rule. [BMF annual tables](https://amtliche-handbuecher.bundesfinanzministerium.de/esth/2025/tabellarische-Uebersicht/inhalt.html).
+
+Also screen eligible school fees, training allowance for adult children away from home, child's health/care contributions, disability allowance transfers, single-parent relief and foster/adopted/stepchild rules. Children with their own investments or income may need separate returns and benefit/insurance checks; adult identity or ownership cannot be changed to use their allowances retroactively.
+
+## Personal expenses and credits
+
+For insurance/pension obtain annual contribution and refund certificates, employer subsidies, foreign equivalents, mandatory/basic versus optional cover, Riester/Rürup and other retirement contracts; reconcile eDaten and avoid claiming twice through child and adult forms. For donations/party contributions establish eligible recipient, proof, calendar-year payments and carryforwards; foreign donations need eligibility research. Distinguish first education from deductible subsequent professional training.
+
+For support/alimony identify recipient, relationship, country, household, income/assets, actual bank payments, legal basis, consent and foreign documentation. Compare only applicable extraordinary-support versus special-expense regimes; do not assume both. For illness/disability/care collect unreimbursed costs, prescription/required certification timing, disability/care determinations, support period and reasonable-burden computation. Apply eligible lump sums and actual costs without overlap. [§10 EStG](https://www.gesetze-im-internet.de/estg/__10.html), [§33 EStG](https://www.gesetze-im-internet.de/estg/__33.html), [§33a EStG](https://www.gesetze-im-internet.de/estg/__33a.html), [§33b EStG](https://www.gesetze-im-internet.de/estg/__33b.html).
+
+Household services/tradespeople: invoice, service location, qualifying labour/travel/machine versus materials, bank payment, grants/reimbursements and allocation. Tenants/owners can have relevant landlord/WEG statements. Check treatment of service year versus approved statement/payment and do not claim rental expenses again privately. Childcare eligible under its own regime is not shifted to §35a merely because its ceiling was exceeded. For owner-occupied energy renovations compare §35c, grants and §35a with certification/occupancy/age/payment requirements and multi-year effects. [§35a EStG](https://www.gesetze-im-internet.de/estg/__35a.html), [§35c EStG](https://www.gesetze-im-internet.de/estg/__35c.html).

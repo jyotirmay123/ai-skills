@@ -1,0 +1,35 @@
+# Capital income, equity, funds, and digital assets
+
+## Reconstruct economic events
+
+Inventory each account/broker/share plan by owner, country, custody type, opening/closing/transfer dates, German withholding, exemption orders and loss pots. Obtain original/corrected annual tax certificates, complete transaction/fee/FX history, distributions, corporate actions and transfers, historical acquisition lots, foreign withholding and assessed loss carryforwards. A broker's foreign tax report or realized-P&L figure may use non-German cost-basis and FX rules; reconcile before using it.
+
+Separate interest/dividends, share sales, fund income, derivatives, private loans, employee benefits and business holdings. Use appropriate acquisition/sale dates and EUR conversions, allowable transaction costs, applicable lot-order rules and corporate-action rules. Preserve historical tax basis on broker transfers unless a specific rule resets it. Investigate missing basis, pre-2009 shares, pre-2018 funds and deemed disposals. Bank credits/debits alone do not establish taxable profit. [§20 EStG](https://www.gesetze-im-internet.de/estg/__20.html).
+
+## Domestic and foreign withholding
+
+Reconcile German capital withholding, Soli/church tax, Sparer-Pauschbetrag used across banks/spouses and foreign taxes. Determine when a KAP declaration is mandatory or useful, including untaxed foreign income, missing church tax, incorrect withholding, loss offset or Günstigerprüfung. Do not assume income below the allowance never requires declaration. Compare available assessment elections only after compiling all required capital income and spouse data. Flat-rate taxation has exceptions; business/substantial-interest cases need classification. [§32d EStG](https://www.gesetze-im-internet.de/estg/__32d.html).
+
+Distinguish the instrument before choosing a form. Foreign interest, ordinary company dividends and individual share disposals generally route through KAP; investment-fund income without German withholding can require KAP-INV plus accompanying KAP information. KAP-INV is not the form for all foreign investments. German withholding status alone cannot distinguish a fund from a share or bank deposit. Verify the selected year's instructions and exceptions. [ELSTER capital instructions 2025](https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025).
+
+Separate bank loss pots, tax-office loss determinations, share-sale losses, other capital losses, private-disposal losses and general income losses. Check bank loss-certificate request deadlines and whether cross-bank offset requires a certificate; do not use the same bank loss twice. Reverify derivatives/worthless-asset loss restrictions and transition law for open cases rather than perpetuating repealed annual caps. Do not offset all investment losses against wages. Preserve loss nature and carryforward history.
+
+## Employee shares / RSUs / ESPP / options
+
+Reconcile grant, vesting, exercise, sale, sell-to-cover and employer payroll events. Determine the employment benefit under the actual award terms and applicable law; later disposal is a separate event. Establish share acquisition basis from documented acquisition cost/value already recognized under the relevant wage-tax rules, not automatically zero because the broker lacks basis. Avoid reporting the same value as wages and capital gain. Include shares sold to cover withholding. Discounted purchases, options, §19a deferral, cross-border service periods and expatriation can need specialist analysis; load the cross-border module.
+
+## Funds and ETFs, especially foreign brokers
+
+For each ISIN/share class obtain tax classification and evidence of eligible equity/mixed/property-fund status, acquisition lots, units, opening/closing redemption prices, distributions, acquisitions/disposals, earlier taxed Vorabpauschalen and transition balances. Domicile, accumulating/distributing label, or the word ETF alone does not establish the applicable Teilfreistellung. Check the correct investor/asset context and fund rules. No distributions does not mean no taxable fund income. [§16 InvStG](https://www.gesetze-im-internet.de/invstg_2018/__16.html), [§20 InvStG](https://www.gesetze-im-internet.de/invstg_2018/__20.html).
+
+For Vorabpauschale, verify the calculation year's official basis interest, beginning value, statutory 70% factor, price-growth-plus-distribution cap, subtraction of distributions, and acquisition-month reduction. Use a nonnegative result and apply the verified partial-exemption treatment. Allocate lots and sold positions under the year's official rules; do not blindly charge every year-end balance. Record calculation year, deemed receipt date and return year as distinct fields. [§18 InvStG](https://www.gesetze-im-internet.de/invstg_2018/__18.html).
+
+Example of the year trap: BMF's 10 January 2025 notice gives a 2.53% basis interest for the **2025 calculation**, with deemed receipt on **2 January 2026**. Consequently that amount concerns the 2026 assessment, while a 2025 assessment must investigate the 2024 calculation deemed received in 2025. This example is not a reusable current rate. [Official BMF notice](https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Investmentsteuer/2025-01-10-basiszins-vorabpauschale-zum-2-1-2025.pdf?__blob=publicationFile&v=2).
+
+Track earlier assessed Vorabpauschalen for disposals and the statutory deduction at the correct gross/pre-exemption level to avoid double taxation; reconcile partial exemptions consistently. Separate investor-level foreign withholding from fund-level taxes embedded in NAV; not every foreign fund tax is personally creditable. For fund income not subject to German withholding check KAP-INV and accompanying KAP requirements; do not duplicate it among KAP, KAP-INV and AUS. [§19 InvStG](https://www.gesetze-im-internet.de/invstg_2018/__19.html), [ELSTER personal 2025 capital instructions](https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025).
+
+## Crypto and difficult instruments
+
+Classify each digital asset/activity: private disposal, payment/swap, staking/lending/mining, airdrop/reward, security token, business or other income. Obtain full wallet/exchange history, self-transfer links, acquisition times, fees and EUR valuations. Own-wallet transfers do not themselves prove a disposal; swaps can. Investigate holding-period and reporting rules for the actual asset/activity/year, distinguish Freigrenze from Freibetrag, and preserve restricted losses. Use official current BMF crypto guidance and §§22/23 EStG, not the assumption that every crypto event belongs to KAP. [§23 EStG](https://www.gesetze-im-internet.de/estg/__23.html).
+
+Escalate materially uncertain options/structured products, securities lending, short sales, corporate reorganizations, foreign retirement wrappers, trusts/partnerships, substantial shareholdings and cross-border equity. Produce complete reconcilable schedules and a targeted research memo even when a final treatment requires review.

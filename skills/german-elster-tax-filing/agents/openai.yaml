@@ -1,0 +1,4 @@
+interface:
+  display_name: "German ELSTER Tax Filing"
+  short_description: "Document-backed German personal and family tax returns"
+  default_prompt: "Use $german-elster-tax-filing to prepare my annual German income-tax return, check relevant documents and current rules, compare lawful tax-saving options, and guide ELSTER filing."
