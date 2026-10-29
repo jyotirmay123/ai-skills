@@ -9,6 +9,7 @@ Reusable Agent Skills for Codex and Claude Code. Each skill follows the open Age
 | [`trip`](skills/trip/SKILL.md) | Research and compare bookable flights with price-first, total-time-aware ranking | `$trip` | `/trip` |
 | [`stay`](skills/stay/SKILL.md) | Compare exact accommodation using complete cost, local mobility, and usable-time impact | `$stay` | `/stay` |
 | [`holiday`](skills/holiday/SKILL.md) | Compose transport, stay, activities, food, and local travel into coherent holiday packages | `$holiday` | `/holiday` |
+| [`translate`](skills/translate/SKILL.md) | Detect document language and provide complete, faithful word-by-word-oriented English translations | `$translate` | `/translate` |
 | [`german-elster-tax-filing`](skills/german-elster-tax-filing/SKILL.md) | Prepare and review German personal/family tax returns with annual legal research, evidence, lawful optimization, and ELSTER guidance | `$german-elster-tax-filing` | `/german-elster-tax-filing` |
 
 ## Quick install
@@ -50,6 +51,8 @@ Copy-Item -Recurse -Force "./skills/stay" "$HOME/.agents/skills/stay"
 Copy-Item -Recurse -Force "./skills/stay" "$HOME/.claude/skills/stay"
 Copy-Item -Recurse -Force "./skills/holiday" "$HOME/.agents/skills/holiday"
 Copy-Item -Recurse -Force "./skills/holiday" "$HOME/.claude/skills/holiday"
+Copy-Item -Recurse -Force "./skills/translate" "$HOME/.agents/skills/translate"
+Copy-Item -Recurse -Force "./skills/translate" "$HOME/.claude/skills/translate"
 Copy-Item -Recurse -Force "./skills/german-elster-tax-filing" "$HOME/.agents/skills/german-elster-tax-filing"
 Copy-Item -Recurse -Force "./skills/german-elster-tax-filing" "$HOME/.claude/skills/german-elster-tax-filing"
 ```
@@ -98,6 +101,20 @@ $holiday Plan a relaxing three-day Lapland holiday from Berlin for two. Compare 
 
 `holiday` uses `trip` for intercity transport and `stay` for accommodation and local mobility. It rejects incompatible combinations and reports whole-party, per-person, and per-usable-day cost alongside travel burden and booking risk.
 
+## Use Translate
+
+Translate source documents or pasted text into English. Detect the language from the content before starting, including German insurance letters, rental contracts, and notarial documents.
+
+```text
+$translate Translate the attached German purchase agreement completely into English, preserving all clauses, numbers, and tables.
+```
+
+```text
+/translate Identify the language and translate this document word by word into English. Separate any concerns from the translation.
+```
+
+The default output includes source-language detection, a complete English translation in original order, and a separate section for notable deadlines, obligations, or inconsistencies. To get an aligned bilingual breakdown, request side-by-side sentences or word-by-word vocabulary glosses.
+
 ## Use German ELSTER Tax Filing
 
 ```text
@@ -143,6 +160,8 @@ rm -r "$HOME/.agents/skills/stay"
 rm -r "$HOME/.claude/skills/stay"
 rm -r "$HOME/.agents/skills/holiday"
 rm -r "$HOME/.claude/skills/holiday"
+rm -r "$HOME/.agents/skills/translate"
+rm -r "$HOME/.claude/skills/translate"
 rm -r "$HOME/.agents/skills/german-elster-tax-filing"
 rm -r "$HOME/.claude/skills/german-elster-tax-filing"
 ```
