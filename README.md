@@ -11,6 +11,7 @@ Reusable Agent Skills for Codex and Claude Code. Each skill follows the open Age
 | [`holiday`](skills/holiday/SKILL.md) | Compose transport, stay, activities, food, and local travel into coherent holiday packages | `$holiday` | `/holiday` |
 | [`translate`](skills/translate/SKILL.md) | Detect document language and provide complete, faithful word-by-word-oriented English translations | `$translate` | `/translate` |
 | [`german-elster-tax-filing`](skills/german-elster-tax-filing/SKILL.md) | Prepare and review German personal/family tax returns with annual legal research, evidence, lawful optimization, and ELSTER guidance | `$german-elster-tax-filing` | `/german-elster-tax-filing` |
+| [`german-speaking-coach`](skills/german-speaking-coach/SKILL.md) | Practice very slow A1/A2-to-B1 German conversation with gentle corrections and session checkpoints | `$german-speaking-coach` | `/german-speaking-coach` |
 
 ## Quick install
 
@@ -55,6 +56,8 @@ Copy-Item -Recurse -Force "./skills/translate" "$HOME/.agents/skills/translate"
 Copy-Item -Recurse -Force "./skills/translate" "$HOME/.claude/skills/translate"
 Copy-Item -Recurse -Force "./skills/german-elster-tax-filing" "$HOME/.agents/skills/german-elster-tax-filing"
 Copy-Item -Recurse -Force "./skills/german-elster-tax-filing" "$HOME/.claude/skills/german-elster-tax-filing"
+Copy-Item -Recurse -Force "./skills/german-speaking-coach" "$HOME/.agents/skills/german-speaking-coach"
+Copy-Item -Recurse -Force "./skills/german-speaking-coach" "$HOME/.claude/skills/german-speaking-coach"
 ```
 
 If a destination already exists, rename or remove it first so PowerShell does not nest the new folder inside the old one.
@@ -114,6 +117,20 @@ $translate Translate the attached German purchase agreement completely into Engl
 ```
 
 The default output includes source-language detection, a complete English translation in original order, and a separate section for notable deadlines, obligations, or inconsistencies. To get an aligned bilingual breakdown, request side-by-side sentences or word-by-word vocabulary glosses.
+
+## Use German Speaking Coach
+
+Start a short, voice-first conversation in simple German. The coach speaks very slowly, asks one question at a time, gently corrects important mistakes, and resumes from recorded progress where available.
+
+```text
+$german-speaking-coach Deutsch üben. Langsam, bitte.
+```
+
+```text
+/german-speaking-coach Nur sprechen. Ich möchte über meinen Tag reden.
+```
+
+The learner has passed a B1 exam but wants to build A1/A2 speaking confidence first. Progress across separate sessions is best-effort and requires memory or session checkpoints. This repository's installer supports **Codex and Claude Code**, not automatic installation into the ChatGPT app.
 
 ## Use German ELSTER Tax Filing
 
