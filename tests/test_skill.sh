@@ -31,4 +31,6 @@ printf 'PASS: Trip skill structure and invariants\n'
 sh "$repo_dir/tests/test_stay_skill.sh"
 sh "$repo_dir/tests/test_holiday_skill.sh"
 
+sh "$repo_dir/tests/test_german_rental_investment_skill.sh"
+
 printf 'PASS: All skill structures and invariants\n'

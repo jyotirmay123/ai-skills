@@ -27,7 +27,7 @@ run_install() {
 codex_home="$test_root/codex"
 mkdir -p "$codex_home"
 run_install "$codex_home" --codex
-for skill_name in trip stay holiday german-elster-tax-filing; do
+for skill_name in trip stay holiday german-elster-tax-filing german-rental-investment; do
   assert_file "$codex_home/.agents/skills/$skill_name/SKILL.md"
   diff -r "$repo_dir/skills/$skill_name" "$codex_home/.agents/skills/$skill_name" ||
     fail "Codex installation changed or omitted $skill_name files"
@@ -37,7 +37,7 @@ done
 claude_home="$test_root/claude"
 mkdir -p "$claude_home"
 run_install "$claude_home" --claude
-for skill_name in trip stay holiday german-elster-tax-filing; do
+for skill_name in trip stay holiday german-elster-tax-filing german-rental-investment; do
   assert_file "$claude_home/.claude/skills/$skill_name/SKILL.md"
   diff -r "$repo_dir/skills/$skill_name" "$claude_home/.claude/skills/$skill_name" ||
     fail "Claude installation changed or omitted $skill_name files"
@@ -47,7 +47,7 @@ done
 all_home="$test_root/all"
 mkdir -p "$all_home"
 run_install "$all_home"
-for skill_name in trip stay holiday german-elster-tax-filing; do
+for skill_name in trip stay holiday german-elster-tax-filing german-rental-investment; do
   assert_file "$all_home/.agents/skills/$skill_name/SKILL.md"
   assert_file "$all_home/.claude/skills/$skill_name/SKILL.md"
 done

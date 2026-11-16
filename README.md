@@ -12,6 +12,7 @@ Reusable Agent Skills for Codex and Claude Code. Each skill follows the open Age
 | [`translate`](skills/translate/SKILL.md) | Detect document language and provide complete, faithful word-by-word-oriented English translations | `$translate` | `/translate` |
 | [`german-elster-tax-filing`](skills/german-elster-tax-filing/SKILL.md) | Prepare and review German personal/family tax returns with annual legal research, evidence, lawful optimization, and ELSTER guidance | `$german-elster-tax-filing` | `/german-elster-tax-filing` |
 | [`german-speaking-coach`](skills/german-speaking-coach/SKILL.md) | Practice very slow A1/A2-to-B1 German conversation with gentle corrections and session checkpoints | `$german-speaking-coach` | `/german-speaking-coach` |
+| [`german-rental-investment`](skills/german-rental-investment/SKILL.md) | Find and underwrite German buy-to-let apartments using legally achievable rent, location growth, cash flow, AfA, guarantees and existing portfolio stress tests | `$german-rental-investment` | `/german-rental-investment` |
 
 ## Quick install
 
@@ -58,6 +59,8 @@ Copy-Item -Recurse -Force "./skills/german-elster-tax-filing" "$HOME/.agents/ski
 Copy-Item -Recurse -Force "./skills/german-elster-tax-filing" "$HOME/.claude/skills/german-elster-tax-filing"
 Copy-Item -Recurse -Force "./skills/german-speaking-coach" "$HOME/.agents/skills/german-speaking-coach"
 Copy-Item -Recurse -Force "./skills/german-speaking-coach" "$HOME/.claude/skills/german-speaking-coach"
+Copy-Item -Recurse -Force "./skills/german-rental-investment" "$HOME/.agents/skills/german-rental-investment"
+Copy-Item -Recurse -Force "./skills/german-rental-investment" "$HOME/.claude/skills/german-rental-investment"
 ```
 
 If a destination already exists, rename or remove it first so PowerShell does not nest the new folder inside the old one.
@@ -157,6 +160,20 @@ cp -R ./skills/german-elster-tax-filing "$HOME/.agents/skills/"
 
 If that destination already exists, back it up first. Restart Codex if the new skill does not appear.
 
+## Use German Rental Investment
+
+Use the skill to screen an entire city or a single listing against **the existing Mannheim portfolio**, current cash reserves, genuine financing offers, lawfully supportable cold rent and downside affordability. The assistant researches live listings with whatever browser/search tools are actually available to Codex or Claude Code; there is no background crawler or subscription included.
+
+```text
+$german-rental-investment Find 3–5 defensible German buy-to-let apartments, with verifiable local rent caps, actual all-in purchase price, zero-appreciation cash flow and portfolio stress tests. Say BUY, NEGOTIATE or BUY NOTHING.
+```
+
+```text
+/german-rental-investment Underwrite this WG apartment, verify its Mietpreisbremse claim and rental guarantee, and calculate a maximum offer without counting tax refunds as rent.
+```
+
+The research method and required sources are in [the skill](skills/german-rental-investment/SKILL.md). An optional offline [Python underwriting checker](skills/german-rental-investment/scripts/underwrite.py) and [synthetic example](skills/german-rental-investment/examples/synthetic-deal.json) support reproducible preliminary figures. No real personal financial data is stored in this public repository. Keep your private profile outside the checkout and verify your Mannheim debt and liquidity at each run. Outputs may be **INSUFFICIENT DATA** or **BUY NOTHING**; no future appreciation, tax deduction or rental guarantee is treated as certain.
+
 ## Update
 
 ```bash
@@ -181,6 +198,8 @@ rm -r "$HOME/.agents/skills/translate"
 rm -r "$HOME/.claude/skills/translate"
 rm -r "$HOME/.agents/skills/german-elster-tax-filing"
 rm -r "$HOME/.claude/skills/german-elster-tax-filing"
+rm -r "$HOME/.agents/skills/german-rental-investment"
+rm -r "$HOME/.claude/skills/german-rental-investment"
 ```
 
 ## Validate changes
@@ -188,6 +207,7 @@ rm -r "$HOME/.claude/skills/german-elster-tax-filing"
 ```bash
 sh tests/test_skill.sh
 sh tests/test_install.sh
+sh tests/test_german_rental_investment_skill.sh
 ```
 
 Installer checks compare complete skill directories, including nested references and metadata. The tax skill's [synthetic evaluation scenarios](skills/german-elster-tax-filing/tests/scenarios.md) exercise complex household intake, ETF timing, acquisition-related repairs, duplicate deductions, tool capability, deadlines and unusual foreign structures. These evaluate preparation behavior; they do not certify tax advice or test live ELSTER submission.

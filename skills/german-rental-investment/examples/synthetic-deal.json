@@ -1,0 +1,42 @@
+{
+  "synthetic_example_only": true,
+  "listing_url": "https://example.org/synthetic-apartment",
+  "observed_on": "2026-11-16",
+  "price_eur": 150000,
+  "area_m2": 55,
+  "acquisition_costs_eur": 15000,
+  "market_value_eur": 153000,
+  "market_rent_cold_month_eur": 1200,
+  "proposed_rent_cold_month_eur": 1200,
+  "legal_max_rent_cold_month_eur": 1200,
+  "rent_law_source_url": "https://example.org/synthetic-rent-report",
+  "rent_law_checked_on": "2026-11-16",
+  "rent_law_verified": false,
+  "listing_verified": false,
+  "financing_verified": false,
+  "tax_effect_verified": false,
+  "property_docs_verified": false,
+  "vacancy_fraction": 0.05,
+  "nonrecoverable_cost_month_eur": 200,
+  "owner_maintenance_month_eur": 100,
+  "sale_cost_fraction": 0.04,
+  "loans": [
+    {
+      "principal_eur": 120000,
+      "annual_interest_pct": 4,
+      "initial_repayment_pct": 2,
+      "fixed_years": 10
+    }
+  ],
+  "annual_incremental_tax_effect_eur": 0,
+  "portfolio": {
+    "existing_annual_rent_eur": 10000,
+    "existing_annual_noi_eur": 8000,
+    "existing_annual_debt_service_eur": 9000,
+    "existing_annual_net_cashflow_eur": -1000,
+    "liquid_after_close_eur": 42000,
+    "minimum_cash_floor_eur": 30000,
+    "salary_net_after_20pct_gross_cut_month_eur": 2900,
+    "household_essentials_month_eur": 2100
+  }
+}
